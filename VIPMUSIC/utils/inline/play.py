@@ -107,6 +107,10 @@ def stream_markup(_, videoid, chat_id):
                 text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
+             InlineKeyboardButton(
+                text="ᴀᴅᴠᴀɴᴄᴇ",
+                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
+            ),
         ],
         [
             InlineKeyboardButton(
@@ -120,8 +124,8 @@ def stream_markup(_, videoid, chat_id):
        
         [
             InlineKeyboardButton(
-                text="ᴀᴅᴠᴀɴᴄᴇ",
-                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
+                text=_["CLOSE_BUTTON"],
+                callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
     ]
