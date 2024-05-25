@@ -95,7 +95,7 @@ async def helper_cb(client, CallbackQuery, _):
     if cb == "hb9":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
-                "😎𝗣𝗔𝗛𝗟𝗘 𓆩𝗩𝗜𝗣𓆪 𝗞𝗢 𝗣𝗔𝗣𝗔 𝗕𝗢𝗟 𝗝𝗔𝗞𝗘 😆😆", show_alert=True
+                "😎", show_alert=True
             )
         else:
             await CallbackQuery.edit_message_text(helpers.HELP_9, reply_markup=keyboard)
@@ -126,27 +126,17 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.HELP_11, reply_markup=keyboard)
     elif cb == "hb12":
         await CallbackQuery.edit_message_text(helpers.HELP_12, reply_markup=keyboard)
-    elif cb == "hb13":
-        await CallbackQuery.edit_message_text(helpers.HELP_13, reply_markup=keyboard)
-
-    elif cb == "hb14":
-        await CallbackQuery.edit_message_text(helpers.HELP_14, reply_markup=keyboard)
     elif cb == "hb15":
         await CallbackQuery.edit_message_text(helpers.HELP_15, reply_markup=keyboard)
     elif cb == "hb16":
         await CallbackQuery.edit_message_text(helpers.HELP_16, reply_markup=keyboard)
     elif cb == "hb17":
         await CallbackQuery.edit_message_text(helpers.HELP_17, reply_markup=keyboard)
-    elif cb == "hb18":
-        await CallbackQuery.edit_message_text(helpers.HELP_18, reply_markup=keyboard)
-    elif cb == "hb19":
-        await CallbackQuery.edit_message_text(helpers.HELP_19, reply_markup=keyboard)
-    elif cb == "hb20":
-        await CallbackQuery.edit_message_text(helpers.HELP_20, reply_markup=keyboard)
-    elif cb == "hb21":
-        await CallbackQuery.edit_message_text(helpers.HELP_21, reply_markup=keyboard)
-    elif cb == "hb22":
-        await CallbackQuery.edit_message_text(helpers.HELP_22, reply_markup=keyboard)
+  
+   
+   
+  
+    
 
 
 @app.on_callback_query(filters.regex("dilXaditi") & ~BANNED_USERS)
