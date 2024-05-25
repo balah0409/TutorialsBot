@@ -176,7 +176,8 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
         ],
     ]
     return buttons
-    def stream_markup2(_, chat_id):
+    
+def stream_markup2(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
