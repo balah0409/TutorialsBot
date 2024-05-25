@@ -103,13 +103,6 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
          
         [
-            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-        [
             InlineKeyboardButton(
                 text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
@@ -117,17 +110,17 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
+                text="ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
             ),
             InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
+                text="ᴄᴏɴᴛʀᴏʟs",
                 callback_data=f"Pages Back|3|{videoid}|{chat_id}",
             ),
         ],
        
         [
             InlineKeyboardButton(
-                text="๏ ᴀᴅᴠᴀɴᴄᴇ ๏",
+                text="ᴀᴅᴠᴀɴᴄᴇ",
                 callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
             ),
         ],
@@ -226,7 +219,7 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Next",
+                text="ɴᴇxᴛ",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
@@ -266,7 +259,7 @@ def queue_markup(_, videoid, chat_id):
        
         [
             InlineKeyboardButton(
-                text="๏ ᴍᴏʀᴇ ๏",
+                text="ᴍᴏʀᴇ",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
@@ -367,11 +360,11 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="๏ ʜᴏᴍᴇ ๏",
+                text="ʜᴏᴍᴇ",
                 callback_data=f"Pages Back|2|{videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="๏ ɴᴇxᴛ ๏",
+                text="ɴᴇxᴛ",
                 callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
             ),
         ],
@@ -413,7 +406,7 @@ def panel_markup_2(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="๏ ʙᴀᴄᴋ ๏",
+                text="ʙᴀᴄᴋ",
                 callback_data=f"Pages Back|1|{videoid}|{chat_id}",
             ),
         ],
@@ -443,11 +436,11 @@ def panel_markup_5(_, videoid, chat_id):
        
         [
             InlineKeyboardButton(
-                text="๏ ʜᴏᴍᴇ ๏",
+                text="ʜᴏᴍᴇ",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="๏ ɴᴇxᴛ ๏",
+                text="ɴᴇxᴛ",
                 callback_data=f"Pages Forw|1|{videoid}|{chat_id}",
             ),
         ],
@@ -541,7 +534,7 @@ def panel_markup_4(_, vidid, chat_id, played, dur):
        
         [
             InlineKeyboardButton(
-                text="๏ ʜᴏᴍᴇ ๏",
+                text="ʜᴏᴍᴇ",
                 callback_data=f"MainMarkup {vidid}|{chat_id}",
             ),
         ],
@@ -568,7 +561,7 @@ def panel_markup_clone(_, vidid, chat_id):
        
         [
             InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ ✚", callback_data=f"vip_playlist {vidid}"
+                text="ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {vidid}"
             ),
         ],
     ]
