@@ -65,65 +65,45 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         bar = "——————————◉"
 
     buttons = [
-        [
+                [
             InlineKeyboardButton(
-                 text=f"{played} {bar} {dur}",
+                text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
-            ),
+            )
         ],
         [
-            InlineKeyboardButton(
-                text="II",
-                callback_data=f"ADMIN Pause|{chat_id}",
-            ),
+            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-             InlineKeyboardButton(
-                text="▷", callback_data=f"ADMIN Resume|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="↺", callback_data=f"ADMIN Replay|{chat_id}"
-            ),
         ],
-        [
-            InlineKeyboardButton(
-                text="๏ ғᴇᴀᴛᴜʀᴇs ๏",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
-            ),
-        ],
+                 [
+            InlineKeyboardButton(text="𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/idhayanvibezsupport"),
+            InlineKeyboardButton(text="𝖮𝗐𝗇𝖾𝗋", url=f"https://t.me/Idhayann"),
+         ],
+        
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+                [
+            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [
-            InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
-            ),
-        ],
+                 [
+            InlineKeyboardButton(text="𝖲𝗎𝗉𝗉𝗈𝗋𝗍", url=f"https://t.me/idhayanvibezsupport"),
+            InlineKeyboardButton(text="𝖮𝗐𝗇𝖾𝗋", url=f"https://t.me/Idhayann"),
+         ],
        
-        [
-            InlineKeyboardButton(
-                text="๏ ᴀᴅᴠᴀɴᴄᴇ ๏",
-                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
-            ),
-        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
