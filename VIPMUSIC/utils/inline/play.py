@@ -27,13 +27,13 @@ def track_markup(_, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text="Replay", callback_data=f"ADMIN Replay|{chat_id}"
+                text="ʀᴇᴘʟᴀʏ", callback_data=f"ADMIN Replay|{chat_id}"
             ),
             InlineKeyboardButton(text="End", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
-                text="๏ ᴍᴏʀᴇ ๏",
+                text="ᴍᴏʀᴇ",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
@@ -90,7 +90,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
        
         [
             InlineKeyboardButton(
-                text="๏ ғᴇᴀᴛᴜʀᴇs ๏",
+                text="ғᴇᴀᴛᴜʀᴇs",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
         ],
