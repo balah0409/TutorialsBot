@@ -58,7 +58,7 @@ async def userdel(client, message: Message, _):
         await message.reply_text(_["sudo_8"])
 
 
-photo_url = "https://telegra.ph/file/20b4a9fd06ea4a9457a61.jpg"
+photo_url = "https://telegra.ph/file/c5a4bf7940c331357a839.jpg"
 
 
 @app.on_message(
@@ -85,7 +85,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
     if callback_query.from_user.id not in SUDOERS:
         return await callback_query.answer(
-            "𝐍𝐢𝐤𝐚𝐥 𝐑𝐚𝐧𝐝𝐢 𝐁𝐚𝐥𝐚 𝐒𝐮𝐝𝐨𝐥𝐢𝐬𝐭 𝐃𝐞𝐤𝐡𝐧𝐞 𝐀𝐚𝐲𝐚 𝐇𝐚𝐢 𝐛𝐚𝐝𝐚🖕😎😂", show_alert=True
+            "sᴏʀʀʏ ᴛʜɪs ɪs ɴᴏᴛ ғᴏʀ ʏᴏᴜ", show_alert=True
         )
     else:
         user = await app.get_users(OWNER_ID)
@@ -96,7 +96,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
         keyboard.append(
             [
                 InlineKeyboardButton(
-                    "๏ ᴠɪᴇᴡ ᴏᴡɴᴇʀ ๏", url=f"tg://openmessage?user_id={OWNER_ID}"
+                    "ᴠɪᴇᴡ ᴏᴡɴᴇʀ", url=f"tg://openmessage?user_id={OWNER_ID}"
                 )
             ]
         )
@@ -124,7 +124,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
 
         # Add a "Back" button at the end
         keyboard.append(
-            [InlineKeyboardButton("๏ ʙᴀᴄᴋ ๏", callback_data="back_to_main_menu")]
+            [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="back_to_main_menu")]
         )
 
         if keyboard:
@@ -137,7 +137,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("^back_to_main_menu$"))
 async def back_to_main_menu(client, callback_query: CallbackQuery):
     keyboard = [
-        [InlineKeyboardButton("๏ ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ ๏", callback_data="check_sudo_list")]
+        [InlineKeyboardButton("ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ", callback_data="check_sudo_list")]
     ]
     reply_markupes = InlineKeyboardMarkup(keyboard)
     await callback_query.message.edit_caption(
